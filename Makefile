@@ -21,7 +21,7 @@ VERIFIER_TOOL?=postman
 ## Only deploy from main
 ## ====================
 
-ifeq ($(BRANCH),master)
+ifeq ($(BRANCH),main)
 	DEPLOY_TARGET=deploy
 else
 	DEPLOY_TARGET=no_deploy
@@ -67,7 +67,7 @@ deploy_target: can_i_deploy $(DEPLOY_TARGET)
 ## =====================
 
 test:
-	./mvnw clean test -i
+	mvn clean test
 
 ## =====================
 ## Deploy tasks
@@ -76,7 +76,7 @@ test:
 deploy: can_i_deploy deploy_app
 
 no_deploy:
-	@echo "Not deploying as not on master branch"
+	@echo "Not deploying as not on main branch"
 
 can_i_deploy:
 	@${PACT_BROKER_CLI_COMMAND} can-i-deploy \
