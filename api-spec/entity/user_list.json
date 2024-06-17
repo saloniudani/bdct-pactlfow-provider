@@ -1,0 +1,39 @@
+{
+  "title": "Users",
+  "type": "object",
+  "properties": {
+    "results": {
+      "type": "array",
+      "minItems": 0,
+      "description": "List of all users",
+      "items": {
+        "$ref": "user.json"
+      }
+    },
+    "totalElements": {
+      "type": "integer",
+      "format": "int64",
+      "description": "The total number of items."
+    },
+    "numberOfElements": {
+      "type": "integer",
+      "format": "int32",
+      "description": "The total number of items in a single page."
+    },
+    "size": {
+      "type": "integer",
+      "format": "int32",
+      "description": "The requested page size in paged response."
+    },
+    "number": {
+      "type": "integer",
+      "format": "int32",
+      "description": "The page number."
+    },
+    "totalPages": {
+      "type": "integer",
+      "format": "int32",
+      "description": "Total pages"
+    }
+  }
+}

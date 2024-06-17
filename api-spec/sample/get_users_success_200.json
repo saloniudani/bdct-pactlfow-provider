@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "userId": "jim.corbett@gmail.com",
+      "name": "Jim Corbett",
+      "age": 20
+    },
+    {
+      "userId": "lisa.ray@gmail.com",
+      "name": "Lisa Ray",
+      "age": 45
+    }
+  ],
+  "totalElements": 10,
+  "numberOfElements": 2,
+  "size": 2,
+  "number": 0,
+  "totalPages": 5
+}

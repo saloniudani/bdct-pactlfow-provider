@@ -1,0 +1,17 @@
+{
+  "type": "https://localhost:8080/core-api/validation-error",
+  "title": "Invalid Request",
+  "status": 400,
+  "detail": "Invalid request parameters received",
+  "instance": "/v1/users",
+  "trace_id": "1DWEERQS380JKKROY37710937JFL1002",
+  "errors": [
+    {
+      "code": "MALFORMED_REQUEST_JSON",
+      "reason": "An Invalid request parameter received",
+      "property": "prefs.language",
+      "location": "body"
+    }
+  ]
+}
+

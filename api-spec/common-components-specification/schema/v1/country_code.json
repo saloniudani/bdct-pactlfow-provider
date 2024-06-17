@@ -1,0 +1,7 @@
+{
+    "type": "string",
+    "description": "2-letter country code as defined by ISO-3166",
+    "minLength": 2,
+    "maxLength": 2,
+    "pattern": "^([A-Z]{2}|C2)$"
+}

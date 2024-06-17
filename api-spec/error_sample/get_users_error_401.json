@@ -1,0 +1,8 @@
+{
+  "type": "http://localhost:8080/core-api/unauthorized-access",
+  "title": "Access denied",
+  "status": 401,
+  "detail": "Invalid authentication token received",
+  "instance": "/v1/users",
+  "trace_id": "1DWEERQS380JKKROY37710937JFL1002"
+}

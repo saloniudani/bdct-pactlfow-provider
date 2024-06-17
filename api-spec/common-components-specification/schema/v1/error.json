@@ -1,0 +1,28 @@
+{
+  "title": "Error",
+  "type": "object",
+  "required": ["code", "reason"],
+  "properties": {
+    "code": {
+      "type": "string",
+      "description": "Error Code",
+      "enum": ["MISSING_REQUIRED_PROPERTY",
+        "MALFORMED_REQUEST_JSON",
+        "INVALID_PROPERTY_LENGTH",
+        "INVALID_PROPERTY_VALUE",
+        "READ_ONLY"]
+    },
+    "reason": {
+      "type": "string",
+      "description": "Error Reason Code"
+    },
+    "property": {
+      "type": "string",
+      "description": "Param which caused the violation"
+    },
+    "location": {
+      "type": "string",
+      "description": "The value of the field MUST be a RFC 6901 JSON Pointer String Representation"
+    }
+  }
+}

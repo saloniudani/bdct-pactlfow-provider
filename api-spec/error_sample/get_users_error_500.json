@@ -1,0 +1,8 @@
+{
+  "type": "http://localhost:8080/core-api/internal-server-error",
+  "title": "Internal Server Error",
+  "status": 500,
+  "detail": "Requested action could not be completed",
+  "instance": "/v1/users",
+  "trace_id": "1DWEERQS380JKKROY37710937JFL1002"
+}

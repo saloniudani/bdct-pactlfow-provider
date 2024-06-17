@@ -1,0 +1,8 @@
+{
+  "type": "http://localhost:8080/core-api/resource-not-found",
+  "title": "Resource not found",
+  "status": 404,
+  "detail": "Requested resource does not exist",
+  "instance": "/v1/users",
+  "trace_id": "1DWEERQS380JKKROY37710937JFL1002"
+}

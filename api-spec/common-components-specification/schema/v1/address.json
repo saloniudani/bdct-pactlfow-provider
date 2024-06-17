@@ -1,0 +1,52 @@
+{
+    "type": "object",
+    "title": "Portable Postal Address",
+    "description": "The portable international postal address. Maps to [AddressValidationMetadata](https://github.com/googlei18n/libaddressinput/wiki/AddressValidationMetadata) and HTML 5.1 [Autofilling form controls: the autocomplete attribute](https://www.w3.org/TR/html51/sec-forms.html#autofilling-form-controls-the-autocomplete-attribute).",
+    "properties": {
+        "address_line_1": {
+            "type": "string",
+            "description": "The first line of the address, such as number and street, for example, `123 W Anywhere Ave`.",
+            "maxLength": 300
+        },
+        "address_line_2": {
+            "type": "string",
+            "description": "The second line of the address, for example, a suite or apartment number.",
+            "maxLength": 300
+        },
+        "address_line_3": {
+            "type": "string",
+            "description": "The third line of the address, if needed. Examples are direction text, such as `next to Ikea`, or a landmark in an Indian address.",
+            "maxLength": 100
+        },
+        "admin_area_4": {
+            "type": "string",
+            "description": "The neighborhood, ward, or district. This is smaller than `admin_area_3`.",
+            "maxLength": 100
+        },
+        "admin_area_3": {
+            "type": "string",
+            "description": "The sub-locality, suburb, neighborhood, or district. This is smaller than `admin_area_2`.",
+            "maxLength": 100
+        },
+        "admin_area_2": {
+            "type": "string",
+            "description": "A city, town, or village. Smaller than `admin_area_1`.",
+            "maxLength": 120
+        },
+        "admin_area_1": {
+            "type": "string",
+            "description": "The highest-level sub-division in a country, which is usually a province, state, or ISO-3166-2 subdivision.",
+            "maxLength": 300
+        },
+        "postal_code": {
+            "type": "string",
+            "description": "The postal code, which is the ZIP code or equivalent. Typically required for countries with a postal code or an equivalent. See [postal code](https://en.wikipedia.org/wiki/Postal_code).",
+            "maxLength": 60
+        },
+        "country_code": {
+            "$ref": "country_code.json"
+        },
+    "required": [
+        "country_code"
+    ]
+}

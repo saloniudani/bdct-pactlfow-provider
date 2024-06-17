@@ -1,0 +1,8 @@
+{
+  "type": "http://localhost:8080/core-api/forbidden",
+  "title": "Access denied",
+  "status": 403,
+  "detail": "Access to dataset is forbidden",
+  "instance": "/v1/users",
+  "trace_id": "1DWEERQS380JKKROY37710937JFL1002"
+}

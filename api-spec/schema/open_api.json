@@ -1,0 +1,196 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "BDCT Provider APIs",
+    "description": "BDCT Provider API Specifications",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Core Team",
+      "url": "http://localhost:8080",
+      "email": "saloniudani.tech@gmail.com"
+    }
+  },
+  "servers": [
+    {
+      "description": "Local",
+      "url": "http://localhost:8080"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Get Users",
+      "description": "Get all users",
+      "x-audience": "internal",
+      "x-api-id" : "0c3af411-b64b-4ce8-bab0-58f0c6bfe0f0"
+    }
+  ],
+  "paths": {
+    "/v1/users": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "An API that returns all Users",
+        "description": "An api that returns list of all Users",
+        "operationId": "getUsers",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number for pageable response",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 0,
+              "minimum": 0
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "Page size for pageable response",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 10,
+              "minimum": 1,
+              "maximum": 100
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../entity/user_list.json"
+                },
+                "examples": {
+                  "jsonObject": {
+                    "summary": "An Example of 200 Response",
+                    "externalValue": "https://github.com/saloniudani/bdct-pactlfow-provider/tree/main/api-spec/sample/get_users_success_200.json"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid Request!",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "../common-components-specification/schema/v1/problem_detail.json"
+                },
+                "examples": {
+                  "jsonObject": {
+                    "summary": "An Example of 400 Response",
+                    "externalValue": "https://github.com/saloniudani/bdct-pactlfow-provider/tree/main/api-spec/error_sample/get_users_error_400.json"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "UnAuthorized Request!",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "../common-components-specification/schema/v1/problem_detail.json"
+                },
+                "examples": {
+                  "jsonObject": {
+                    "summary": "An Example of 401 Response",
+                    "externalValue": "https://github.com/saloniudani/bdct-pactlfow-provider/tree/main/api-spec/error_sample/get_users_error_401.json"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Access denied!",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "../common-components-specification/schema/v1/problem_detail.json"
+                },
+                "examples": {
+                  "jsonObject": {
+                    "summary": "An Example of 403 Response",
+                    "externalValue": "https://github.com/saloniudani/bdct-pactlfow-provider/tree/main/api-spec/error_sample/get_users_error_403.json"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource not found!",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "../common-components-specification/schema/v1/problem_detail.json"
+                },
+                "examples": {
+                  "jsonObject": {
+                    "summary": "An Example of 404 Response",
+                    "externalValue": "https://github.com/saloniudani/bdct-pactlfow-provider/tree/main/api-spec/error_sample/get_users_error_404.json"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "../common-components-specification/schema/v1/problem_detail.json"
+                },
+                "examples": {
+                  "jsonObject": {
+                    "summary": "An Example of 500 Response",
+                    "externalValue": "https://github.com/saloniudani/bdct-pactlfow-provider/tree/main/api-spec/error_sample/get_users_error_500.json"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "wm_consumer.intimestamp": {
+        "type": "apiKey",
+        "name": "wm_consumer.intimestamp",
+        "in": "header"
+      },
+      "wm_sec.auth_signature": {
+        "type": "apiKey",
+        "name": "wm_sec.auth_signature",
+        "in": "header"
+      },
+      "wm_sec.key_version": {
+        "type": "apiKey",
+        "name": "wm_sec.key_version",
+        "in": "header"
+      },
+      "wm_svc.name": {
+        "type": "apiKey",
+        "name": "wm_svc.name",
+        "in": "header"
+      },
+      "wm_consumer.id": {
+        "type": "apiKey",
+        "name": "wm_consumer.id",
+        "in": "header"
+      },
+      "wm_svc.env": {
+        "type": "apiKey",
+        "name": "wm_svc.env",
+        "in": "header"
+      }
+    }
+  }
+}

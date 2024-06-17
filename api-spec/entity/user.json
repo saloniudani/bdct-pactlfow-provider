@@ -1,0 +1,16 @@
+{
+  "title": "User",
+  "type": "object",
+  "properties": {
+    "userId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "age": {
+      "type": "integer",
+      "format": "int32"
+    }
+  }
+}
