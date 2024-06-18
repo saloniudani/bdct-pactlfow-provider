@@ -12,7 +12,7 @@ PACTFLOW_CLI_COMMAND:=${PACT_CLI_DOCKER_RUN_COMMAND} ${PACTFLOW_CLI_COMMAND}
 ## ====================
 VERSION?=$(shell npx -y absolute-version)
 BRANCH?=$(shell git rev-parse --abbrev-ref HEAD)
-OAS_PATH=api-spec/schema/open_api.json
+OAS_PATH=api-spec/schema/open_api_combined.json
 REPORT_PATH?=report.txt
 REPORT_FILE_CONTENT_TYPE?=text/plain
 VERIFIER_TOOL?=postman

@@ -143,6 +143,32 @@
 
 				</executions>
 			</plugin>
+			<plugin>
+				<groupId>io.swagger.codegen.v3</groupId>
+				<artifactId>swagger-codegen-maven-plugin</artifactId>
+				<version>3.0.33</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<inputSpec>api-spec/schema/open_api.json</inputSpec>
+
+							<!-- Use 'openapi-yaml' to get resolved YAML or 'openapi' to get resolved JSON -->
+							<language>openapi</language>
+
+							<!-- Default is ${project.build.directory}/generated-sources/swagger -->
+							<output>api-spec/schema</output>
+
+							<configOptions>
+								<!-- Default output file name is 'openapi.yaml' or 'openapi.json' -->
+								<outputFile>open_api_combined.json</outputFile>
+							</configOptions>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 
